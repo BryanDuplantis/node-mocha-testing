@@ -1,0 +1,23 @@
+{
+  "name": "node-mocha-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryanDuplantis/node-mocha-testing.git"
+  },
+  "author": "Bryan Duplantis <duplantis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BryanDuplantis/node-mocha-testing/issues"
+  },
+  "homepage": "https://github.com/BryanDuplantis/node-mocha-testing#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
