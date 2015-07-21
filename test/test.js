@@ -22,12 +22,25 @@ describe('animal', function () {
 
       animal.isAlive.should.be.true;
     });
+    it('should accept a type', function () {
+      var cat = new Animal('cat');
+      var dog = new Animal('dog');
+
+      cat.type.should.eql('cat');
+      dog.type.should.eql('dog');
+    });
   });
 
   describe('#beCute()', function () {
+    it('should be a prototype method', function () {
+      var animal = new Animal();
+      animal.should.respondTo('beCute');
+      animal.should.not.have.ownProperty('beCute');
+    });
+
     it('should make the animal cute', function () {
       var animal = new Animal();
-      animal.isCute.should.not.be.true;
+      should.not.exist(animal.isCute);
       animal.beCute();
       animal.isCute.should.be.true;
     });
