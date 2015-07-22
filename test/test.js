@@ -1,11 +1,24 @@
 var path = require('path');
 var should = require("chai").should();
 var Animal = require(path.join(process.cwd() + '/lib/animal'));
+var cp = require('child_process');
 
 describe('Mocha + Chai', function () {
   it('truthyness', function () {
     true.should.equal(true);
     false.should.be.false;
+  });
+});
+
+describe('CLI', function () {
+  it('should thank for me downloading', function () {
+    console.log('childprocess');
+    cp.execFile('./app.js', function (err, stdout) {
+      console.log('err', err);
+      console.log('stdout', stdout);
+      stdout.should.eql('Thanks for downloading my app!!');
+      done();
+    });
   });
 });
 
@@ -22,12 +35,26 @@ describe('animal', function () {
 
       animal.isAlive.should.be.true;
     });
+    it('should have 100% health', function () {
+      var animal = new Animal();
+      animal.health.should.eql(1);
+    });
     it('should accept a type', function () {
       var cat = new Animal('cat');
       var dog = new Animal('dog');
 
       cat.type.should.eql('cat');
       dog.type.should.eql('dog');
+    });
+  });
+
+  describe('#updateHealthStats()', function () {
+    it('should change the health', function () {
+      var animal = new Animal();
+      var health = animal.health;
+
+      animal.updateHealthStats();
+      animal.health.should.not.eql();
     });
   });
 
@@ -85,7 +112,3 @@ describe('Array', function () {
 
   });
 });
-
-
-
-// # is an instance method; runs on an instance of an array
