@@ -3,7 +3,7 @@ var should = require("chai").should();
 var Animal = require(path.join(process.cwd(), '/lib/animal'));
 var cp = require('child_process');
 
-//TESTING AN 'ANIMAL' OBJECT
+// testing an 'animal' object
 
 
 describe('animal', function () {
@@ -56,7 +56,7 @@ describe('#updateHealthStats()', function () {
   });
 });
 
-// THIS TEST IS TESTING THE TESTING. MIND BLOWN.
+// this test is testing the test
 
   describe('Tests', function() {
     it('truthyness', function() {
@@ -64,7 +64,7 @@ describe('#updateHealthStats()', function () {
   });
 });
 
-// TEST ARRAY WITH MAP FUNCTIONS
+// test array with map functions
 
 describe('Array', function () {
   describe('#map()', function () {
