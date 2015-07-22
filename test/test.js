@@ -14,8 +14,8 @@ describe('CLI', function () {
   it('should thank for me downloading', function () {
     console.log('childprocess');
     cp.execFile('./app.js', function (err, stdout) {
-      console.log('err', err);
-      console.log('stdout', stdout);
+      // console.log('err', err);
+      // console.log('stdout', stdout);
       stdout.should.eql('Thanks for downloading my app!!');
       done();
     });
