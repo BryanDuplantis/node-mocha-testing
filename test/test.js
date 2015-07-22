@@ -56,7 +56,7 @@ describe('#updateHealthStats()', function () {
   });
 });
 
-// this test is testing the test
+// this test is testing the test; whoa
 
   describe('Tests', function() {
     it('truthyness', function() {
